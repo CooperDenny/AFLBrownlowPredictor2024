@@ -519,9 +519,6 @@ summary_table <- game_vote_predictions %>%
   select(1:2, 28, 3:27, 29:32) %>%
   arrange(desc(Predicted_Votes), desc(Count_3_Votes), desc(Count_2_Votes), desc(Count_1_Vote))
 
-#write.csv(summary_table, "brownlow_round_by_round_predictions.csv", row.names = FALSE)
-#write_xlsx(summary_table, "C:/Users/coope/Documents/R Project/AFL Data/Models/vote_tally_2024.xlsx")
-
 datatable(summary_table, options = list(scrollX = TRUE, pageLength = 10))
 ```
 
@@ -572,7 +569,7 @@ datatable(vote_tally, options = list(scrollX = TRUE))
 
 The analysis of the predictions compared to the actual votes for the Brownlow Medal reveals several important insights into the model's performance. 
 
-Our model has done reasonable well. The highlight is that it has correctly predicted Patrick Cripps to break the all time vote tally record (not as extreme as he actually did!), as well having Nick Daicos finish second with a high vote count as well.
+Our model has done reasonably well. The highlight is that it has correctly predicted Patrick Cripps to break the all time vote tally record (not as extreme as he actually did!), as well having Nick Daicos finish second with a high vote count as well.
 
 In terms of error metrics for the vote counts, the Mean Absolute Error (MAE) is `r round(mean(abs(vote_tally$Predicted.Votes - vote_tally$Actual.Votes)),3)`, and the Root Mean Square Error (RMSE) is `r round(sqrt(mean((vote_tally$Predicted.Votes - vote_tally$Actual.Votes)^2)),3)`. 
 
