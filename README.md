@@ -4,7 +4,7 @@ This project dives into predicting the 2024 AFL Brownlow Medal votes, using a da
 The repository contains an R Markdown document and associated files for leveraging an ordinal logistic regression model to predict the 2024 Brownlow Medal votes awarded to players in each AFL game, based on game statistics and other metrics.
 
 ## Results
-The analysis of the predictions compared to the actual votes for the Brownlow Medal revealed several important insights into the model’s performance. While the model didn’t correctly predict the eventual winner in Lachie Neale (an outside chance according to bookmakers), in terms of error metrics the difference between the model’s predicted votes and the actual votes for each player is quite accurate.
+The analysis of the predictions compared to the actual votes for the Brownlow Medal revealed several important insights into the model’s performance. The highlight of the model's output is that it has correctly predicted Patrick Cripps to break the all time vote tally record (not as extreme as he actually did!), as well having Nick Daicos finish second with a high vote count as well.
 - When taking a subset of players who I predicted to poll votes and/or actually polled votes (removing players who were predicted to poll 0 votes and also actually polled 0 votes as this would provide a false sense of accuracy), the Mean Absolute Error (MAE) was 2.008, indicating that, on average, the predicted votes differ from the actual votes by about 2.008 votes.
 - The model also correctly predicted the player to poll 3 votes in 55.56% of matches (115 out of 207).
 
@@ -34,8 +34,6 @@ The model predicts the following top 20 for the 2024 Brownlow Medal. Predicted v
 | Tom Green                | GWS Giants          | 17              | 27           | 18             | 6           |
 | Jordan Dawson            | Adelaide Crows      | 17              | 18           | 18             | 16          |
 | Max Gawn                 | Melbourne           | 16              | 13           | 20             | 28          |
-
-The highlight of the model's output is that it has correctly predicted Patrick Cripps to break the all time vote tally record (not as extreme as he actually did!), as well having Nick Daicos finish second with a high vote count as well.
 
 ## Contents
 - `AFL.Brownlow.Prediction.Model.2024.html`: The knitted html document containing the analysis code.
